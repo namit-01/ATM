@@ -1,0 +1,31 @@
+print("insert your card")
+pin=1234
+password=int(input("enter your pin: "))
+if(password==pin):
+    while(True):
+ 
+                  print("================================")
+                  print('''
+                   1=balace
+                   2=withdraw
+                   3=credit
+                   4=Exit''')
+                  balance=5000
+                  print("================================")
+                  choice=int(input("Enter your choice: "))
+                  if(choice==1):
+                           print("Available balance is: ",balance)
+                  elif(choice==2):
+                              withdraw=int(input("Enter the amount that you want to withdraw: "))
+                              if(withdraw<balance):
+                                                 balance=balance-withdraw
+                                                 print("Available balance is: ",balance)
+                              else:
+                                   print("Insufficient balance")
+                  elif(choice==3):
+                             credit=int(input("Enter the amount that you want to deposit: "))
+                             balance=balance+credit
+                             print("Available balance is :",balance)
+
+                  elif(choice==4):
+                              break
